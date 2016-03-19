@@ -4,9 +4,13 @@ First, we use an artificial data set to study PLA. <br /><br />
 
 Each line of the data set contains one (xn,yn) with xn ∈ R4. The first 4 numbers of the line contains the components of xn orderly, the last number is yn. Please initialize your algorithm with w = 0 and take sign(0) as −1. As a friendly reminder, remember to add x0 = 1 as always! <br /><br />
 
-1. Implement a version of PLA by visiting examples in the na ̈ıve cycle using the order of examples in the data set. Run the algorithm on the data set. What is the number of updates before the algorithm halts? What is the index of the example that results in the “last” mistake? <br /><br />
+1. Implement a version of PLA by visiting examples in the na ̈ıve cycle using the order of examples in the data set. Run the algorithm on the data set. What is the number of updates before the algorithm halts? What is the index of the example that results in the “last” mistake? <br />
+60 times iterations <br /> 
+last mistake: index 8 <br />
+w = (-4, 3.6161856, -2.013502, 3.123158, 5.49830856)^T <br /><br />
 
-2. Implement a version of PLA by visiting examples in fixed, pre-determined random cycles throughout the algorithm. Run the algorithm on the data set. Please repeat your experiment for 2000 times, each with a different random seed. What is the average number of updates before the algorithm halts? Plot a histogram ( https://en.wikipedia.org/wiki/Histogram ) to show the number of updates versus frequency. <br /><br />
+2. Implement a version of PLA by visiting examples in fixed, pre-determined random cycles throughout the algorithm. Run the algorithm on the data set. Please repeat your experiment for 2000 times, each with a different random seed. What is the average number of updates before the algorithm halts? Plot a histogram ( https://en.wikipedia.org/wiki/Histogram ) to show the number of updates versus frequency. <br />
+w = (-3.707, 2.97603105, -1.74656448, 3.07966456, 5.214928)^T <br /><br />
 
 3. Implement a version of PLA by visiting examples in fixed, pre-determined random cycles throughout the algorithm, while changing the update rule to be <br />
 *wt+1 ← wt + ηyn(t)xn(t)* <br />
