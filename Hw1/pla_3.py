@@ -16,12 +16,13 @@ def sign_n(tmp):
 
 def pla(w, x, y):
     count = 0
+    n = 0.5
     orderlist = arange(len(y))
     shuffle(orderlist)
     while count < 100000: 
         for i in orderlist:
             if y[i] != sign_n(dot((w.T), x[:,i])):
-                w = w + dot(y[i], x[:,i])
+                w = w + n*dot(y[i], x[:,i])
                 count = count + 1
                 break
             elif i == len(y)-1:
