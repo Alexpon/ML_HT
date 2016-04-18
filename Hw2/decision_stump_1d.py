@@ -54,14 +54,16 @@ ein = 0
 eout = 0
 ein_sum = 0
 eout_sum = 0
-e_list = []
+ein_list = []
+eout_list = []
 for i in range(5000):
     (x_tr, y_tr) = generate_training_data()
     (x_te, y_te) = generate_training_data()
     (s, threshold) = training(x_tr, y_tr)
     ein = e_in_out(x_tr, y_tr, s, threshold)
     eout = e_in_out(x_te, y_te, s, threshold)
-    e_list.append(ein)
+    ein_list.append(ein)
+    eout_list.append(eout)
     ein_sum += ein
     eout_sum += eout
 
@@ -69,5 +71,6 @@ eout = eout_sum/5000
 ein = ein_sum/5000
 print ("Ein: ", ein)
 print ("Eout: ", eout)
-bar(range(len(e_list)), e_list)
-show()
+#bar(range(len(ein_list)), ein_list)
+#bar(range(len(eout_list)), eout_list)
+#show()
