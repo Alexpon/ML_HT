@@ -13,7 +13,8 @@ In this problem, you are asked to implement such and algorithm and run your prog
 
 Decision stumps can also work for multi-dimensional data. In particular, each decision stump now deals with a specific dimension i, as shown below.</br>
 *hs,i,θ (x) = s · sign(xi − θ).*</br>
-Implement the following decision stump algorithm for multi-dimensional data:
+Implement the following decision stump algorithm for multi-dimensional data:</br>
+
 1. for each dimension i = 1, 2, · · · , d, find the best decision stump hs,i,θ using the one-dimensional decision stump algorithm that you have just implemented.
 2. return the “best of best” decision stump in terms of Ein. If there is a tie, please randomly choose among the lowest-Ein ones.
 
