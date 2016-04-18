@@ -9,7 +9,13 @@ In this problem, you are asked to implement such and algorithm and run your prog
 *(b) Generate y by s ̃(x) + noise where s ̃(x) = sign(x) and the noise flips the result with 20% probability.*</br>
 
 1. Generate a data set of size 20 by the procedure above and run the one-dimensional decision stump algorithm on the data set. Record Ein and compute Eout with the formula above. Repeat the experiment (including data generation, running the decision stump algorithm, and computing Ein and Eout) 5,000 times. What is the average Ein? Plot a histogram for your Ein distribution.
-2. Continuing from the previous question, what is the average Eout? Plot a histogram for your Eout distribution.</br>
+2. Continuing from the previous question, what is the average Eout? Plot a histogram for your Eout distribution.</br></br>
+
+Decision stumps can also work for multi-dimensional data. In particular, each decision stump now deals with a specific dimension i, as shown below.</br>
+*hs,i,θ (x) = s · sign(xi − θ).*</br>
+Implement the following decision stump algorithm for multi-dimensional data:
+1. for each dimension i = 1, 2, · · · , d, find the best decision stump hs,i,θ using the one-dimensional decision stump algorithm that you have just implemented.
+2. return the “best of best” decision stump in terms of Ein. If there is a tie, please randomly choose among the lowest-Ein ones.
 
 Prof. Hsuan-Tien Lin <br />
 Link: https://www.csie.ntu.edu.tw/~htlin/course/ml15fall/ <br />
